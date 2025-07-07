@@ -1,0 +1,42 @@
+{
+  "name": "progetto-javascript-advanced",
+  "version": "1.0.0",
+  "description": "**Owly** è una piattaforma educativa interattiva progettata per supportare bambini, genitori e insegnanti nel percorso di apprendimento. La pagina web offre sezioni dedicate alla lettura, allo studio, alla LIS (Lingua dei Segni Italiana) e all’area personale.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "cross-env NODE_ENV=production DEPLOY_ENV=LOCAL webpack --mode production",
+    "build:local": "cross-env NODE_ENV=production DEPLOY_ENV=LOCAL webpack --mode production",
+    "build:gh": "cross-env NODE_ENV=production DEPLOY_ENV=GH_PAGES webpack --mode production",
+    "build:netlify": "cross-env NODE_ENV=production DEPLOY_ENV=NETLIFY webpack --mode production",
+    "deploy": "cross-env DEPLOY_ENV=GH_PAGES gh-pages -d dist",
+    "deploy-netlify": "cross-env DEPLOY_ENV=NETLIFY netlify deploy --dir=dist --prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junior5969/javascript-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junior5969/javascript-project/issues"
+  },
+  "homepage": "https://github.com/junior5969/javascript-project#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "netlify-cli": "^22.2.1",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

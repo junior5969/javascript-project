@@ -1,4 +1,4 @@
-import "../css/style.css";
+import '../css/style.css';
 
 document.addEventListener("DOMContentLoaded", () => {
   const sectionBooks = document.querySelector("#show-books");
