@@ -9,7 +9,7 @@ export function scrollAnimations(selector = ".fade-in", animationClass = "visibl
       }
     });
   }, {
-    threshold: 0.2,
+    threshold: 0.3,
   });
 
   document.querySelectorAll(selector).forEach(el => observer.observe(el));
