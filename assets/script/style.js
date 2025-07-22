@@ -1,3 +1,5 @@
+import "../css/style.css"; 
+
 export function showSection(section) {
   section.style.display = "flex";
   section.style.flexDirection = "column";

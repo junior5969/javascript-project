@@ -1,14 +1,15 @@
 
 export function scrollAnimations(selector = ".fade-in", animationClass = "visible") {
-  const observer = new IntersectionObserver((entries, observerRef) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add(animationClass);
-        observerRef.unobserve(entry.target); // disattiva dopo la prima animazione
+      } else {
+        entry.target.classList.remove(animationClass);
       }
     });
   }, {
-    threshold: 0.1, // quando il 10% dell'elemento è visibile
+    threshold: 0.2,
   });
 
   document.querySelectorAll(selector).forEach(el => observer.observe(el));
