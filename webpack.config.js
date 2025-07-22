@@ -12,7 +12,7 @@ module.exports = {
   entry: './assets/script/app.js', 
   output: {
     path: path.resolve(__dirname, 'dist'), 
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: isGitHubPages ? '/javascript-project/' : '', 
   },
   optimization: {
