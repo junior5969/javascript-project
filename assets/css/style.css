@@ -219,6 +219,7 @@ header {
     height: 100%;
     position: relative;
     top: 10%;
+    margin-top: 100px;
 }
 
 .intro-img img {
@@ -373,6 +374,9 @@ header {
     background-color: rgb(151, 244, 151);
 }
 
+i .circle-card {
+    cursor:pointer;
+}
 
 /*LOADER*/
 
@@ -758,7 +762,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 320px; /* puoi aumentare o diminuire */
+  max-width: 320px; 
   width: 100%;
   height: 400px;
   margin: 0 auto;
@@ -766,16 +770,15 @@ header {
   padding-bottom: 40px;
 }
 
-/* Stili generali per entrambe le immagini sovrapposte */
 .phone-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 20px;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
    opacity: 0;
   z-index: 1;
 }

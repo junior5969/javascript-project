@@ -25,34 +25,16 @@ export function displayLoader(element) {
   element.style.gap = "2rem";
 }
 
-export function zoomHover (elements) {
-elements.forEach((element) => {
-    element.addEventListener("mouseenter", (event) => {
-      event.target.style.transform = "scale(1.1)";
-      event.target.style.transition = "transform 0.3s ease";
+export function addHoverEffect(elements, scale = 1.1) {
+  elements.forEach((el) => {
+    el.style.cursor = "pointer";
+    el.addEventListener("mouseenter", () => {
+      el.style.transform = `scale(${scale})`;
+      el.style.transition = "transform 0.3s ease";
     });
-  });
-
-
-  elements.forEach((element) => {
-    element.addEventListener("mouseleave", (event) => {
-      event.target.style.transform = "scale(1)";
-    });
-  });
-}  
-
-
-export function zoomCard (elements) {
-      elements.forEach((element) => {
-    element.style.cursor = "pointer";
-
-    element.addEventListener("mouseenter", (event) => {
-      event.currentTarget.style.transform = "scale(1.1)";
-      event.currentTarget.style.transition = "transform 0.3s ease";
-    });
-
-    element.addEventListener("mouseleave", (event) => {
-      event.currentTarget.style.transform = "scale(1)";
+    el.addEventListener("mouseleave", () => {
+      el.style.transform = "scale(1)";
     });
   });
 }
+
