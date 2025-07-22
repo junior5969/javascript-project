@@ -13,6 +13,21 @@
     --darkness-blue: #26024f;
 }
 
+body {
+    animation: scrolling linear;
+}
+
+@keyframes scrolling {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -362,6 +377,49 @@ header {
     background-color: rgb(151, 244, 151);
 }
 
+
+/*LOADER*/
+
+.hidden-loader {
+  display: none;
+}
+
+#loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.877);
+  z-index: 9999;
+}
+
+#loader-overlay p {
+  font-size: clamp(2.4rem, 4vw, 2.8rem);
+  font-weight: 500;
+  font-family: "Fredoka", sans-serif;
+  color: #09254f;
+  text-align: center;
+}
+
+.loader {
+  font-size: clamp(2.8rem, 4vw, 3.4rem);
+  font-weight: 500;
+  font-family: "Fredoka", sans-serif;
+  color: #09254f;
+  text-align: center;
+  animation: spin 2s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*SEARCH*/
 
 #search {
@@ -694,6 +752,7 @@ header {
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
+     position: relative;
 }
 
 .image-mobile-container img {
@@ -701,6 +760,24 @@ header {
     height: auto;
     border-radius: 20px;
     object-fit: cover;
+    z-index: 1;
+    opacity: 1;
+}
+
+.phone-image {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
+    height: auto;
+  object-fit: cover;
+}
+
+.notification-image {
+  opacity: 0;
+  z-index: 2;
 }
 
 /*FOOTER*/

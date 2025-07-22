@@ -76,19 +76,19 @@
             <div class="card-container">
                 <div class="card-list">
                     <div>
-                        <i class="bi bi-book"></i>
+                        <i class="bi bi-book circle-card"></i>
                         <p>Approfondisci le tue conoscenze cercando il libro che fa al caso tuo</p>
                     </div>
                     <div>
-                        <i class="bi bi-joystick"></i>
+                        <i class="bi bi-joystick circle-card"></i>
                         <p>Allenati con quiz interattivi per consolidare lo studio</p>
                     </div>
                     <div>
-                        <i class="bi bi-pencil"></i>
+                        <i class="bi bi-pencil circle-card"></i>
                         <p>Consulta appunti e testi relativi alle lezioni seguite in classe</p>
                     </div>
                     <div>
-                        <i class="bi bi-envelope"></i>
+                        <i class="bi bi-envelope circle-card"></i>
                         <p>Ricevi comunicazioni dalla tua scuola per rimanere sempre aggiornato</p>
                     </div>
                 </div>
@@ -120,15 +120,22 @@
         <section id="search">
             <h2>Scegli la categoria di libro che vuoi leggere!</h2>
             <div class="search-container">
-                <div class="search-elements">
+                <div class="search-elements" id="input-section">
                     <label for="category" class="sr-only">Inserisci la categoria di libri da cercare</label>
-                    <input type="text" class="textbox" id="category" placeholder="Categoria" required>
+                    <input type="text" class="textbox" id="category" required>
                     <button type="button" class="btn btn--lightblue search-button"
                         aria-label="Cerca una categoria di libro che vuoi leggere">Cerca</button>
                 </div>
             </div>
         </section>
 
+          <div id="loader-overlay" class="hidden-loader">
+        <div class="loader">
+          <i class="bi bi-arrow-repeat"></i>
+        </div>
+        <p class="text-loader">Caricamento</p>
+      </div>
+      
         <div id="show-books">
         </div>
 
@@ -197,8 +204,10 @@
                     aria-label="Accedi alle comunicazioni della tua scuola">Accedi</button>
                 <div class="image-mobile-container">
                     <img src="assets/img/img-message.png"
-                        alt="Illustrazione di uno smartphone che riceve un messaggio di avviso dalla scuola" loading="lazy">
+                        alt="Illustrazione di uno smartphone che aspetta un messaggio di avviso dalla scuola"class="phone-image" loading="lazy">
+                <img src="assets/img/first-img-message.png" alt="Illustrazione di uno smartphone che riceve un messaggio di avviso dalla scuola" class="phone-image notification-image" />
                 </div>
+                    </div>
             </div>
         </section>
 
