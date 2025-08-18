@@ -1,7 +1,8 @@
 # Dipendenze Node.js
 node_modules/
 
-# Cartella di build dist/ 
+# Cartella di build
+dist/ 
 
 # File di log
 npm-debug.log*
