@@ -99,8 +99,3 @@ Visualizza il progetto su [Netlify](https://owly-website.netlify.app/).
 ## 📂 Repository GitHub
 
 Visita il codice sorgente su [GitHub](https://junior5969.github.io/javascript-advanced/).
-
-
-## 📄 Documentazione 
-
-[Presentazione del progetto (PDF)](./Presentazione.pdf)
