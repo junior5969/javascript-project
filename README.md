@@ -93,9 +93,9 @@ Chiara Barletta
 
 ## 🌐 Demo Online
 
-Visualizza il progetto su [Netlify](https://owly-website.netlify.app/). 
+Visualizza il progetto su [Netlify](https://owly-project.netlify.app/).
 
 
 ## 📂 Repository GitHub
 
-Visita il codice sorgente su [GitHub](https://junior5969.github.io/javascript-advanced/).
+Visita il codice sorgente su [GitHub](https://github.com/junior5969/javascript-project/).
